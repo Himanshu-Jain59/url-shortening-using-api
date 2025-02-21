@@ -83,7 +83,7 @@ button {
 /* big container */
 .bigContainer {
   margin-top: 8rem;
-  height: 100rem;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 95%);
@@ -97,7 +97,7 @@ button {
   background-color: hsl(257, 27%, 26%);
   border-radius: 0.6rem;
   position: relative;
-  top: -4.5%;
+  top: -10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,12 +123,10 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 4rem;
 }
 .card3 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 .card3 h1 {
   font-size: 2.5rem;
@@ -140,7 +138,7 @@ button {
   line-height: 1.5rem;
 }
 .card {
-  height: 14rem;
+  height: 15rem;
   width: 20rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -163,6 +161,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.lines {
+  background-color: hsl(180, 66%, 49%);
+  height: 0.7rem;
+  width: 3rem;
 }
 
 /* footer */
