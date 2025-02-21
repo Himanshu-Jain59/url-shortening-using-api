@@ -12,6 +12,11 @@ button {
   border: none;
   color: white;
   font-weight: 700;
+
+  margin-top: 1.5rem;
+  font-size: medium;
+  border-radius: 2rem;
+  padding: 0.7rem 2rem;
 }
 
 /* header */
@@ -46,6 +51,9 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+.header button {
+  margin: 0;
+}
 
 /* section 1 */
 .section1 {
@@ -66,15 +74,123 @@ button {
   line-height: 5rem;
   color: black;
 }
-.card1 button {
-  margin-top: 1.5rem;
-  font-size: medium;
-  border-radius: 2rem;
-  padding: 0.7rem 2rem;
-}
+
 .card2 {
   position: relative;
   overflow-x: hidden;
 }
 
+/* big container */
+.bigContainer {
+  margin-top: 8rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 95%);
+}
+
 /* section2 */
+.section2 {
+  height: 8rem;
+  margin: 1% 10%;
+  background-image: url("./images/bg-shorten-desktop.svg");
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 0.6rem;
+  position: relative;
+  top: -12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.section2 input {
+  width: 70%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: large;
+  color: hsl(0, 0%, 75%);
+}
+.section2 button {
+  margin: 0;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: large;
+}
+/* section3 */
+.section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card3 {
+  text-align: center;
+}
+.card3 h1 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+.card3 p {
+  color: hsl(257, 7%, 63%);
+  font-size: large;
+  line-height: 1.5rem;
+}
+
+/* footer */
+.upper {
+  height: 15rem;
+  background-image: url("./images/bg-boost-desktop.svg");
+  background-color: hsl(257, 27%, 26%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upper h1 {
+  font-size: 2.5rem;
+}
+.lower {
+  height: 10rem;
+  background-color: hsl(260, 8%, 14%);
+  padding: 5% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.panel p {
+  font-weight: 700;
+  color: white;
+  font-size: larger;
+  line-height: 2.5rem;
+}
+.panel a {
+  text-decoration: none;
+  font-weight: 500;
+  color: hsl(0, 0%, 75%);
+}
+.panel1 {
+  padding-right: 15%;
+}
+.panel5 {
+  width: 15%;
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* attribution */
+.attribution {
+  font-size: large;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
