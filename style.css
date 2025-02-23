@@ -6,13 +6,17 @@
   font-family: "Poppins";
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 button {
   background-color: hsl(180, 66%, 49%);
   outline: none;
   border: none;
   color: white;
   font-weight: 700;
-
+  cursor: pointer;
   margin-top: 1.5rem;
   font-size: medium;
   border-radius: 2rem;
@@ -84,6 +88,7 @@ button {
 .bigContainer {
   margin-top: 8rem;
   height: 50rem;
+  min-height: max-content;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 95%);
@@ -103,20 +108,66 @@ button {
   align-items: center;
   gap: 1rem;
 }
-.section2 input {
+#link {
   width: 70%;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   outline: none;
   border: none;
   font-size: large;
-  color: hsl(0, 0%, 75%);
+}
+#link:focus {
+  outline: 10px solid black;
 }
 .section2 button {
   margin: 0;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   font-size: large;
+}
+#error {
+  display: none;
+  text-align: start;
+  color: hsl(0, 87%, 67%);
+  font-size: small;
+  position: absolute;
+  top: 80%;
+  left: 7%;
+}
+/* linkcards */
+.linkCards {
+  margin: 1% 10%;
+  height: 4rem;
+  padding: 0.3% 2%;
+  background: white;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  top: -7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.linkCards a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  overflow: hidden;
+}
+.copy {
+  margin: 0;
+  border-radius: 7px;
+}
+.copy.copied {
+  background-color: hsl(255, 11%, 22%); /* Change to blue */
+}
+.linkBox {
+  height: max-content;
+  width: 88%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* section3 */
 .section3 {
