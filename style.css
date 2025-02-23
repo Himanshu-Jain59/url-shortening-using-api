@@ -22,6 +22,9 @@ button {
   border-radius: 2rem;
   padding: 0.7rem 2rem;
 }
+button:hover {
+  background-color: hsl(180, 66%, 69%);
+}
 
 /* header */
 .header {
@@ -48,6 +51,9 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.tags a:hover {
+  color: black;
 }
 .btns {
   width: 25%;
@@ -256,6 +262,9 @@ button {
   text-decoration: none;
   font-weight: 500;
   color: hsl(0, 0%, 75%);
+}
+.panel a:hover {
+  color: hsl(180, 66%, 49%);
 }
 .panel1 {
   padding-right: 15%;
