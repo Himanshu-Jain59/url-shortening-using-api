@@ -1,15 +1,61 @@
 let inp_link = document.querySelector("#link");
 let shortIt = document.querySelector(".section2 button");
+let bigContainer = document.querySelector(".bigContainer");
+let section2 = document.querySelector(".section2");
+let err_msg = document.querySelector("#error");
 
-function new_links() {
+function new_links(res) {
   let box = document.createElement("div");
-  let ogUrl = document.createElement("p");
-  let short = document.createElement("p");
-
   box.className = "linkCards";
+  let linkBox = document.createElement("div");
+  linkBox.className = "linkBox";
+
+  let ogUrl = document.createElement("a");
+  ogUrl.innerHTML = inp_link.value;
+  ogUrl.setAttribute("href", inp_link.value);
+  ogUrl.setAttribute("target", "_blank");
+
+  let short = document.createElement("a");
+  short.innerHTML = res;
+  short.setAttribute("href", res);
+  short.setAttribute("target", "_blank");
+  short.style.color = "hsl(180, 66%, 49%)";
+
+  let btn = document.createElement("button");
+  btn.className = "copy";
+  btn.innerHTML = "Copy";
+  btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(res);
+    btn.classList.add("copied");
+    btn.innerHTML = "Copied!";
+    setTimeout(() => {
+      btn.textContent = "Copy"; // Reset the text to 'Copy'
+      btn.classList.remove("copied"); // Remove the 'copied' class to reset color
+    }, 500);
+  });
+
+  section2.after(box);
+  box.appendChild(linkBox);
+  box.appendChild(btn);
+  linkBox.appendChild(ogUrl);
+  linkBox.appendChild(short);
+}
+
+function validation(isValid) {
+  if (isValid) {
+    inp_link.style.outline = "none";
+    err_msg.style.display = "none";
+  } else {
+    inp_link.style.outline = "4px solid hsl(0, 87%, 67%)";
+    err_msg.style.display = "inline";
+  }
 }
 
 const shortenUrl = async () => {
+  if (!inp_link.value) {
+    validation(false);
+    return;
+  }
   const url = "https://url-shortener42.p.rapidapi.com/shorten/";
   const options = {
     method: "POST",
@@ -29,13 +75,15 @@ const shortenUrl = async () => {
     const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
+    validation(true);
+    new_links(result.url);
   } catch (error) {
     console.error(error);
+    validation(false);
   }
 };
-
-// Call the function
 
 shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
+inp_link.addEventListener("click", validation(true));
