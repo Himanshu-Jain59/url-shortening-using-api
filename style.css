@@ -25,6 +25,9 @@ button {
 button:hover {
   background-color: hsl(180, 66%, 69%);
 }
+.navigation {
+  display: none;
+}
 
 /* header */
 .header {
@@ -36,6 +39,7 @@ button:hover {
   color: hsl(257, 7%, 63%);
 }
 .header button {
+  margin: 0;
   padding: 0.7rem 2rem;
   border-radius: 2rem;
   font-size: 14px;
@@ -55,14 +59,14 @@ button:hover {
 .tags a:hover {
   color: black;
 }
+#menu {
+  display: none;
+}
 .btns {
   width: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.header button {
-  margin: 0;
 }
 
 /* section 1 */
@@ -83,6 +87,9 @@ button:hover {
   font-size: 4.5rem;
   line-height: 5rem;
   color: black;
+}
+.card1 p {
+  width: 70%;
 }
 
 .card2 {
@@ -105,6 +112,7 @@ button:hover {
   height: 8rem;
   margin: 1% 10%;
   background-image: url("./images/bg-shorten-desktop.svg");
+  background-size: cover;
   background-color: hsl(257, 27%, 26%);
   border-radius: 0.6rem;
   position: relative;
@@ -122,9 +130,7 @@ button:hover {
   border: none;
   font-size: large;
 }
-#link:focus {
-  outline: 10px solid black;
-}
+
 .section2 button {
   margin: 0;
   padding: 1rem 2rem;
@@ -182,6 +188,9 @@ button:hover {
   align-items: center;
 }
 .card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -190,6 +199,7 @@ button:hover {
   line-height: 4rem;
 }
 .card3 p {
+  width: 35%;
   color: hsl(257, 7%, 63%);
   font-size: large;
   line-height: 1.5rem;
@@ -229,6 +239,7 @@ button:hover {
 .upper {
   height: 15rem;
   background-image: url("./images/bg-boost-desktop.svg");
+  background-size: cover;
   background-color: hsl(257, 27%, 26%);
   color: white;
   display: flex;
@@ -241,7 +252,7 @@ button:hover {
 }
 .lower {
   height: 10rem;
-  background-color: hsl(260, 8%, 14%);
+  background-color: hsl(255, 11%, 22%);
   padding: 5% 10%;
   display: flex;
   justify-content: space-between;
@@ -281,6 +292,152 @@ button:hover {
   font-size: large;
   text-align: center;
 }
+.attribution p {
+  display: inline;
+}
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* mobile */
+@media (max-width: 425px) {
+  .header {
+    margin: 8% 5%;
+  }
+  .tags {
+    width: 100%;
+  }
+  .tags a {
+    display: none;
+  }
+  .btns {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+
+  /* section 1 */
+  .section1 {
+    margin: 0;
+    flex-direction: column-reverse;
+  }
+  .card1 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .card1 h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    margin-bottom: 1rem;
+  }
+  .card1 p {
+    width: 100%;
+  }
+
+  .card2 {
+    margin-left: 2rem;
+  }
+
+  /* section2 */
+  .section2 {
+    height: 12rem;
+    background-image: url("./images/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex-direction: column;
+  }
+  #link {
+    width: 80%;
+  }
+
+  .section2 button {
+    width: 88%;
+    margin-top: 1rem;
+  }
+  #error {
+    top: 45%;
+  }
+  /* linkcards */
+  .linkCards {
+    padding: 1rem 2rem;
+    min-height: max-content;
+    flex-direction: column;
+  }
+
+  .copy {
+    width: 100%;
+  }
+
+  .linkBox {
+    gap: 0.5rem;
+    align-items: start;
+    min-height: max-content;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  /* section3 */
+  .card3 {
+    margin-bottom: 3rem;
+  }
+  .card3 h1 {
+    font-size: 2rem;
+  }
+  .card3 p {
+    width: 80%;
+  }
+  .section3 {
+    padding-bottom: 10%;
+    flex-direction: column;
+  }
+
+  .card {
+    min-height: max-content;
+    width: 17rem;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  .lines {
+    width: 0.7rem;
+    height: 3rem;
+  }
+
+  /* footer */
+
+  .upper h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .lower {
+    min-height: max-content;
+
+    align-items: center;
+    flex-direction: column;
+  }
+  .panel {
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .panel a {
+    line-height: 1rem;
+  }
+
+  .panel1 {
+    margin-top: 3rem;
+    padding-right: 0;
+  }
+  .panel5 {
+    width: 50%;
+    margin: 3rem 0;
+  }
+  .attribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
