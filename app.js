@@ -4,8 +4,8 @@ let bigContainer = document.querySelector(".bigContainer");
 let section2 = document.querySelector(".section2");
 let err_msg = document.querySelector("#error");
 let menu = document.getElementById("menu");
-let card2 = document.getElementsByClassName("card2");
-let navigation = document.getElementsByClassName("navigation");
+let card2 = document.querySelector(".card2");
+let navigation = document.querySelector(".hide");
 
 function new_links(res) {
   let box = document.createElement("div");
@@ -49,7 +49,7 @@ function validation(isValid) {
     inp_link.style.outline = "none";
     err_msg.style.display = "none";
   } else {
-    inp_link.style.outline = "4px solid hsl(0, 87%, 67%)";
+    inp_link.style.outline = "3px solid hsl(0, 87%, 67%)";
     err_msg.style.display = "inline";
   }
 }
@@ -89,8 +89,13 @@ const shortenUrl = async () => {
 shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
+
 inp_link.addEventListener("click", validation(true));
+
 menu.addEventListener("click", () => {
-  navigation.style.display = "flex";
-  card2.style.display = "none";
+  navigation.classList.toggle("hide");
+  card2.classList.toggle("hide");
+
+  navigation.classList.toggle("navigation");
+  card2.classList.toggle("card2");
 });
