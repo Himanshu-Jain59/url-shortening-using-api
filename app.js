@@ -3,6 +3,9 @@ let shortIt = document.querySelector(".section2 button");
 let bigContainer = document.querySelector(".bigContainer");
 let section2 = document.querySelector(".section2");
 let err_msg = document.querySelector("#error");
+let menu = document.getElementById("menu");
+let card2 = document.getElementsByClassName("card2");
+let navigation = document.getElementsByClassName("navigation");
 
 function new_links(res) {
   let box = document.createElement("div");
@@ -87,3 +90,7 @@ shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
 inp_link.addEventListener("click", validation(true));
+menu.addEventListener("click", () => {
+  navigation.style.display = "flex";
+  card2.style.display = "none";
+});
