@@ -17,6 +17,7 @@ function new_links(res) {
   ogUrl.innerHTML = inp_link.value;
   ogUrl.setAttribute("href", inp_link.value);
   ogUrl.setAttribute("target", "_blank");
+  ogUrl.style.width = "70%";
 
   let short = document.createElement("a");
   short.innerHTML = res;
@@ -79,18 +80,21 @@ const shortenUrl = async () => {
     const result = await response.json();
     console.log(result);
     validation(true);
-    new_links(result.url);
-  } catch (error) {
-    console.error(error);
-    validation(false);
+
+    if (result.message == "URL is invalid") {
+      validation(false);
+    } else {
+      new_links(result.url);
+      inp_link.value = "";
+    }
+  } catch (err) {
+    console.error(err);
   }
 };
 
 shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
-
-inp_link.addEventListener("click", validation(true));
 
 menu.addEventListener("click", () => {
   navigation.classList.toggle("hide");
