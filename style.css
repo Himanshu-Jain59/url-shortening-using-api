@@ -187,10 +187,15 @@ button:hover {
   align-items: center;
 }
 .linkCards a {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
   text-decoration: none;
   color: black;
   font-size: large;
   overflow: hidden;
+  width: 25%;
 }
 .copy {
   margin: 0;
@@ -211,7 +216,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10%;
+  margin: 0 5%;
 }
 .card3 {
   display: flex;
