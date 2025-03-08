@@ -96,6 +96,10 @@ shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
 
+inp_link.addEventListener("keypress", () => {
+  validation(true);
+});
+
 menu.addEventListener("click", () => {
   navigation.classList.toggle("hide");
   card2.classList.toggle("hide");
