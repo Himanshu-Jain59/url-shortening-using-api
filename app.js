@@ -96,7 +96,7 @@ shortIt.addEventListener("click", async () => {
   shortenUrl();
 });
 
-inp_link.addEventListener("keypress", () => {
+inp_link.addEventListener("focus", () => {
   validation(true);
 });
 
