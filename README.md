@@ -47,6 +47,7 @@ Users should be able to:
 - class name toggling
 - API usage
 - reponsive designing
+- event handling
 
 ### Useful resources
 
